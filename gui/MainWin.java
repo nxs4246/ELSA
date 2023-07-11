@@ -47,7 +47,10 @@ import java.awt.Dimension;
 import java.awt.Font;                // rich text in a JLabel or similar widget
 import java.awt.Graphics;
 import java.awt.Graphics2D;
+import java.awt.GridBagConstraints;
 import java.awt.GridLayout;
+import java.awt.GridBagLayout;
+import java.awt.GridBagLayoutInfo;
 import java.awt.image.BufferedImage; // holds an image loaded from a file
 
 public class MainWin extends JFrame {
@@ -554,7 +557,7 @@ public class MainWin extends JFrame {
             @Override
             protected void paintComponent(Graphics g) {
                 super.paintComponent(g);
-                int[] xPoints = {120, 150, 250, 280, 250, 150};
+                int[] xPoints = {120-40, 150-40, 250-40, 280-40, 250-40, 150-40};
                 int[] yPoints = {85, 20, 20, 85, 150, 150};
                 Graphics2D g2d = (Graphics2D) g;
                 g2d.setStroke(new BasicStroke(8));
@@ -568,13 +571,12 @@ public class MainWin extends JFrame {
 
                 g.setColor(Color.RED);
                 g.setFont(new Font(Font.SANS_SERIF, Font.BOLD, 43));
-                g.drawString("ELSA", 140, 101);
+                g.drawString("ELSA", 140-40, 101);
                 g.setColor(Color.BLUE);
                 g.setFont(new Font(Font.SANS_SERIF, Font.BOLD, 12));
-                g.drawString("Exceptional Laptops and Supercomputers Always", 25, 175);
             }
         };
-        hexPanel.setPreferredSize(new Dimension(380, 200));
+        hexPanel.setPreferredSize(new Dimension(170, 200));
         
         // Create the second JPanel with JLabel components
         JPanel labelPanel = new JPanel();
@@ -601,7 +603,7 @@ public class MainWin extends JFrame {
         labelPanel.add(creator);
 
         // Third Panel with names of artists
-        JPanel artistpanel = new JPanel(new GridLayout(1, 2));
+        JPanel artistpanel = new JPanel();
             JLabel artists = new JLabel("<html>"
                     + "<br/><p>Logo based on work by Clker-Free-Vector-Images per the Pixabay License</p>"
                     + "<p><font size=-2>https://pixabay.com/vectors/internet-www-mouse-web-business-42583</font></p>"
@@ -640,11 +642,34 @@ public class MainWin extends JFrame {
                     SwingConstants.CENTER);
         artistpanel.add(artists);
 
-        JPanel contentPane = new JPanel(new GridLayout(2, 2));
-        contentPane.add(hexPanel);
-        contentPane.add(labelPanel);
-        contentPane.add(artistpanel);
-
+        JPanel contentPane = new JPanel(new GridBagLayout());
+        GridBagConstraints c = new GridBagConstraints();
+        
+        // Set fill to BOTH for hexPanel
+        c.fill = GridBagConstraints.BOTH;
+        c.weightx = 1.0; // Increase weightx
+        c.weighty = 1.0; // Increase weighty
+        c.gridx = 0;
+        c.gridy = 0;
+        contentPane.add(hexPanel, c);
+        
+        // Set fill to BOTH for labelPanel
+        c.fill = GridBagConstraints.BOTH;
+        c.weightx = 1.0; // Increase weightx
+        c.weighty = 0.0; // Set weighty to 0
+        c.gridx = 1;
+        c.gridy = 0;
+        contentPane.add(labelPanel, c);
+        
+        // Set fill to BOTH for artistpanel
+        c.fill = GridBagConstraints.BOTH;
+        c.weightx = 1.0; // Increase weightx
+        c.weighty = 0.0; // Set weighty to 0
+        c.gridx = 0;
+        c.gridy = 1;
+        c.gridwidth = 2; // Update gridwidth to span two columns
+        contentPane.add(artistpanel, c);
+        
         JFrame frame = new JFrame("About");
         frame.setResizable(false);
         frame.setDefaultCloseOperation(JFrame.HIDE_ON_CLOSE);
