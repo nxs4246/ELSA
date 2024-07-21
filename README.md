@@ -11,9 +11,9 @@ To run ELSA, ensure that you have the following dependencies installed:
 Please make sure your machine has all the dependencies mentioned in the "Requirements" section.\
 After cloning the repo, enter into the ELSA directory where we have the build.xml file. Run the following commands in the terminal:  
 
-To compile: 
+**To compile:** 
 ```$ ant```  
-To run (after compilation is complete):
+**To run (after compilation is complete):**
 ```$ java gui.Elsa```
 
 ## Features
