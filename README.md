@@ -12,7 +12,7 @@ Please make sure your machine has all the dependencies mentioned in the "Require
 After cloning the repo, enter into the ELSA directory where we have the build.xml file. Run the following commands in the terminal:  
 
 To compile: 
-```$ ant```
+```$ ant```  
 To run (after compilation is complete):
 ```$ java gui.Elsa```
 
