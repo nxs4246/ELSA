@@ -7,6 +7,16 @@ To run ELSA, ensure that you have the following dependencies installed:
 - **Java Development Kit (JDK) 11 or higher:** ELSA is built using OpenJDK 11.
 - **Apache Ant:** ELSA utilizes Apache Ant as a build tool.
 
+## How to run
+Please make sure your machine has all the dependencies mentioned in the "Requirements" section.\
+After cloning the repo, enter into the ELSA directory where we have the build.xml file. Run the following commands in the terminal:\
+
+To compile: 
+```$ ant```
+
+To run (after compilation is complete):
+```$ java gui.Elsa```
+
 ## Features
 - **Computer Options Components Management:** ELSA allows you to add and manage various computer options components, such as processors, graphics cards, memory modules, storage devices, and more. You can add new components, update their specifications, and remove components as needed.
 
@@ -17,17 +27,6 @@ To run ELSA, ensure that you have the following dependencies installed:
 - **Order Tracking:** ELSA keeps track of the orders placed by customers. It records the details of each order, including the components selected, quantities, total price, and customer information. This feature allows for efficient order management and retrieval of order history.
 
 ![ELSA Logo](gui/resources/elsa.png)
-
-## How to run
-Please make sure your machine has all the dependencies mentioned in the "Requirements" section.\
-
-After cloning the repo, enter into the ELSA directory where we have the build.xml file. Run the following commands in the terminal:\
-To compile: 
-```$ ant```
-
-To run (after compilation is complete):
-```$ java gui.Elsa```
-
 
 ## License
 ELSA is released under the GNU General Public License (GPL) version 3.0.
