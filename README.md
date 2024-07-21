@@ -9,7 +9,7 @@ To run ELSA, ensure that you have the following dependencies installed:
 
 ## How to run
 Please make sure your machine has all the dependencies mentioned in the "Requirements" section.\
-After cloning the repo, enter into the ELSA directory where we have the build.xml file. Run the following commands in the terminal:\
+After cloning the repo, enter into the ELSA directory where we have the build.xml file. Run the following commands in the terminal:  
 
 To compile: 
 ```$ ant```
