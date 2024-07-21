@@ -13,7 +13,6 @@ After cloning the repo, enter into the ELSA directory where we have the build.xm
 
 To compile: 
 ```$ ant```
-
 To run (after compilation is complete):
 ```$ java gui.Elsa```
 
