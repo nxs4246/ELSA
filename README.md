@@ -1,6 +1,6 @@
-# ELSA
-### _(Exceptional Laptops and Supercomputers Always)_
-ELSA is a store management program built using Java and the Java Swing (JSwing) library. It provides a user-friendly graphical user interface (GUI) for managing computer options components, setting prices, creating custom computers, and keeping track of orders.
+# ELSA - _(Exceptional Laptops and Supercomputers Always)_
+
+I created as a part of my class project. ELSA is a store management program built using Java and the Java Swing (JSwing) library. It provides a user-friendly graphical user interface (GUI) for managing computer options components, setting prices, creating custom computers, and keeping track of orders.
 
 ## Requirements
 To run ELSA, ensure that you have the following dependencies installed:
@@ -26,6 +26,9 @@ After cloning the repo, enter into the ELSA directory where we have the build.xm
 - **Order Tracking:** ELSA keeps track of the orders placed by customers. It records the details of each order, including the components selected, quantities, total price, and customer information. This feature allows for efficient order management and retrieval of order history.
 
 ![ELSA Logo](gui/resources/elsa.png)
+
+## Demo
+![Demo](demo.gif)
 
 ## License
 ELSA is released under the GNU General Public License (GPL) version 3.0.
