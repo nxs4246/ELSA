@@ -1,6 +1,6 @@
-# ELSA - _(Exceptional Laptops and Supercomputers Always)_
+# ELSA - a Store Management Program
 
-I created as a part of my class project. ELSA is a store management program built using Java and the Java Swing (JSwing) library. It provides a user-friendly graphical user interface (GUI) for managing computer options components, setting prices, creating custom computers, and keeping track of orders.
+I created as a part of my class project. ELSA (Exceptional Laptops and Supercomputers Always) is a store management program built using Java and the Java Swing (JSwing) library. It provides a user-friendly graphical user interface (GUI) for managing computer options components, setting prices, creating custom computers, and keeping track of orders.
 
 ## Requirements
 To run ELSA, ensure that you have the following dependencies installed:
